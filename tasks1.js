@@ -19,7 +19,7 @@ console.log(array);
 for (i = 0; i < array.length; i++) {
 
     if (array[i] > 0) {
-        sum += array[i]; 
+        sum += array[i];
     }
 }
 
@@ -55,22 +55,33 @@ let quarter = '';
 if (x > 0) {
 
     if (y > 0) {
-        quarter = 'Точка с координатами (X,Y) пренадлежит 1-ой четверти.'
+        quarter = 'Точка с координатами (X,Y) пренадлежит 1-ой четверти.';
     } else if (y < 0) {
-        quarter = 'Точка с координатами (X,Y) пренадлежит 4-ой четверти.'
-    } 
+        quarter = 'Точка с координатами (X,Y) пренадлежит 4-ой четверти.';
+    } else if (y === 0) {
+        quarter = 'Точка с координатами (X,Y) лежит на оси абсцисс между 1-ой и 4-ой четвертью.';
+    }
 
-} else if (y > 0) {
-    quarter = 'Точка с координатами (X,Y) пренадлежит 2-ой четверти.'
-} else if (y < 0) {
-    quarter = 'Точка с координатами (X,Y) пренадлежит 3-ей четверти.'
+} else if (x < 0) {
+
+    if (y > 0) {
+        quarter = 'Точка с координатами (X,Y) пренадлежит 2-ой четверти.';
+    } else if (y < 0) {
+        quarter = 'Точка с координатами (X,Y) пренадлежит 3-ой четверти.';
+    } else if (y === 0) {
+        quarter = 'Точка с координатами (X,Y) лежит на оси абсцисс между 2-ой и 3-ей четвертью.'; 
+    }
+
 } else if (x === 0) {
 
-    if (y === 0) {
-        quarter = 'Точка находится на пересечении координат (X,Y).' 
+    if (y > 0) {
+        quarter = 'Точка с координатами (X,Y) лежит на оси ординат между 1-ой и 2-ой четвертью.';
+    } else if (y < 0) {
+        quarter = 'Точка с координатами (X,Y) лежит на оси ординат между 3-ей и 4-ой четвертью.';
+    } else if (y === 0) {
+        quarter = 'Точка (X,Y) находится на пересечении координат.'; 
     }
-}
-
+} 
 
 console.log(quarter);
 
@@ -83,8 +94,8 @@ console.log(quarter);
 let randomNumber = 0;
 let arr = [];
 
-for (i=0; i < 10; i++) {
-    randomNumber = Math.floor(Math.random()*50);
+for (i = 0; i < 10; i++) {
+    randomNumber = Math.floor(Math.random() * 50);
     arr.push(randomNumber);
 }
 
@@ -95,13 +106,13 @@ let min = arr[0];
 let maxIndex = 0;
 let minIndex = 0;
 
-for (i = 1; i < arr.length; i++) {     
+for (i = 1; i < arr.length; i++) {
 
     if (max < arr[i]) {
         max = arr[i];
         maxIndex = i;
     }
-    
+
     if (min > arr[i]) {
         min = arr[i];
         minIndex = i;
@@ -117,7 +128,7 @@ let sumElements = 0;
 
 for (i = 0; i < arr.length; i++) {
 
-    if (i%2 != 0) {
+    if (i % 2 != 0) {
         sumElements += arr[i];
     }
 }
