@@ -37,12 +37,12 @@ for (i = 0; i < array.length; i++) {
     totalSum += array[i];
 }
 
-// if (product >= totalSum) {
-//     result = product+3;
-// } else {
-//     result = totalSum+3;
-// }
-result = Math.max(product, totalSum) + 3;
+if (product >= totalSum) {
+    result = product + 3;
+} else {
+    result = totalSum + 3;
+}
+//result = Math.max(product, totalSum) + 3;
 
 console.log(result);
 
@@ -69,7 +69,7 @@ if (x > 0) {
     } else if (y < 0) {
         quarter = 'Точка с координатами (X,Y) пренадлежит 3-ой четверти.';
     } else if (y === 0) {
-        quarter = 'Точка с координатами (X,Y) лежит на оси абсцисс между 2-ой и 3-ей четвертью.'; 
+        quarter = 'Точка с координатами (X,Y) лежит на оси абсцисс между 2-ой и 3-ей четвертью.';
     }
 
 } else if (x === 0) {
@@ -79,9 +79,9 @@ if (x > 0) {
     } else if (y < 0) {
         quarter = 'Точка с координатами (X,Y) лежит на оси ординат между 3-ей и 4-ой четвертью.';
     } else if (y === 0) {
-        quarter = 'Точка (X,Y) находится на пересечении координат.'; 
+        quarter = 'Точка (X,Y) находится на пересечении координат.';
     }
-} 
+}
 
 console.log(quarter);
 
@@ -120,7 +120,7 @@ for (i = 1; i < arr.length; i++) {
 }
 
 console.log('Mаксимальный элемент массива: ' + max, 'минимальный элемент массива: ' + min);
-console.log('Индекс max элемента массива:' + maxIndex, 'sиндекс min элемента массива: ' + minIndex);
+console.log('Индекс максимального элемента массива:' + maxIndex, 'индекс минимального элемента массива: ' + minIndex);
 
 //5. Посчитать сумму элементов массива с нечетными индексами
 
